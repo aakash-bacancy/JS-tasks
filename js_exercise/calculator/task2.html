@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script type="text/javascript">
+		function op()
+		{
+			var temp,result;
+			var st=document.getElementById("one").value;
+			if(st.includes("+"))
+			{
+				temp=st.split("+");
+				result=parseInt(temp[0])+parseInt(temp[1]);
+				document.getElementById("res").value=result;
+				//alert("the result is "+result);
+			}
+			else if(st.includes("-"))
+			{
+				temp=st.split("-");
+				result=parseInt(temp[0])-parseInt(temp[1]);
+				document.getElementById("res").value=result;
+				//alert("the result is "+result);
+			}
+			else if(st.includes("*"))
+			{
+				temp=st.split("*");
+				result=parseInt(temp[0])*parseInt(temp[1]);
+				document.getElementById("res").value=result;
+				//alert("the result is "+result);
+			}
+			else if(st.includes("/"))
+			{
+				temp=st.split("/");
+				result=parseInt(temp[0])/parseInt(temp[1]);
+				document.getElementById("res").value=result;
+				//alert("the result is "+result);
+			}
+
+		}
+	</script>
+</head>
+<body>
+<center>
+<div style="height: 500px; width: auto; border:2px solid black; border-radius: 15px; background-color: gray;">
+<h2>Enter arithmathic operation with value in below box</h2>
+<br>
+<input type="text" id="one" placeholder="enter operation here">
+<br>
+<br>
+<input type="submit" value="Enter" onclick="op()">
+<br>
+<br>
+<input type="text" id="res" placeholder="ANSWER">
+</center>
+</div>
+</body>
+</html>

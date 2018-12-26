@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>multiplication table</title>
+	<script type="text/javascript">
+		var temp1;
+		function Cal()
+		{
+			temp1="";
+			var number=document.getElementById('number').value;
+			for(var i=1;i<=10;i++)
+			{
+				temp1=temp1+number+" * "+i+" ="+number*i+"<br>";
+				//temp1=document.createTextNode(number+" * "+i+" ="+number*i);
+				//temp.appendChild(temp1);
+			}
+			document.getElementById('p1').innerHTML=temp1;
+		}
+	</script>
+</head>
+<body>
+	<center>
+	<div style="background-color: gray; height: 400px; width: auto; border-color: 3px solid black; border-radius: 20px;">
+	<input type="text" name="value" id="number" placeholder="enter number">
+	<br><br>
+	<input type="submit" value="Enter"  onclick="Cal()">
+	<p id="p1" style="background-color: gray;"></p>
+	</div>
+	</center>
+</body>
+</html>
